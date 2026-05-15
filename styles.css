@@ -1,0 +1,211 @@
+/* ==========================================================================
+   Variables de Diseño - Identidad Visual Flora (Magenta & Blanco Minimalista)
+   ========================================================================== */
+:root {
+    --primary-magenta: #e91e63; /* Rosa vibrante para botones, logos y links activos */
+    --soft-pink: #fce4ec;       /* Fondo pastel suave para el banner superior */
+    --dark-text: #212121;       /* Gris oscuro para títulos y legibilidad alta */
+    --light-gray: #757575;      /* Gris intermedio para descripciones secundarias */
+    --border-gray: #f5f5f5;     /* Separadores y bordes limpios de tarjetas */
+    --white: #ffffff;           /* Fondo general limpio */
+    --shadow-subtle: rgba(0, 0, 0, 0.05); /* Sombra suave para efectos hover */
+}
+
+/* ==========================================================================
+   Estilos Globales y Tipografía
+   ========================================================================== */
+body {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   Menú de Navegación Global (Navbar Limpia)
+   ========================================================================== */
+nav {
+    background-color: var(--white);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+nav .logo {
+    color: var(--primary-magenta);
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap; /* Soporte para pantallas medianas */
+}
+
+nav a {
+    color: var(--dark-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+    color: var(--primary-magenta);
+}
+
+/* ==========================================================================
+   Estructura de Contenedores y Diseños de Grilla
+   ========================================================================== */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Sección Destacada (Hero Banner Rosa de la Imagen) */
+.hero-section {
+    background-color: var(--soft-pink);
+    border-radius: 24px;
+    padding: 50px 60px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-section h1 {
+    font-size: 40px;
+    color: var(--dark-text);
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+/* Distribución Modular en Grilla (Catálogo y Dashboards) */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+/* Tarjetas Individuales Básicas */
+.card {
+    background: var(--white);
+    border: 1px solid var(--border-gray);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px var(--shadow-subtle);
+}
+
+.card h3 {
+    font-size: 18px;
+    margin: 15px 0 8px 0;
+    color: var(--dark-text);
+}
+
+.card p {
+    font-size: 14px;
+    color: var(--light-gray);
+    margin: 5px 0;
+}
+
+.card .price {
+    color: var(--primary-magenta);
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0 15px 0;
+}
+
+/* ==========================================================================
+   Elementos de Interacción (Botones y Enlaces de Acción)
+   ========================================================================== */
+/* Botón Principal Ovalado Estilo Flora */
+button, .btn-primary {
+    background-color: var(--primary-magenta);
+    color: var(--white);
+    border: none;
+    padding: 12px 32px;
+    border-radius: 50px; /* Bordes totalmente redondeados tipo píldora */
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+button:hover, .btn-primary:hover {
+    background-color: #c2185b; /* Variación magenta más oscura al pasar el mouse */
+}
+
+/* Botones Rectangulares Suaves para Tarjetas e Historial */
+.btn-secondary-stack {
+    background-color: var(--primary-magenta);
+    color: var(--white);
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 8px; /* Borde rectangular suave de la interfaz del catálogo */
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: opacity 0.2s ease;
+}
+
+.btn-secondary-stack:hover {
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   Tablas de Datos Limpias (Inventario e Historial)
+   ========================================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: var(--white);
+}
+
+th {
+    border-bottom: 2px solid var(--border-gray);
+    padding: 16px 12px;
+    text-align: left;
+    color: var(--light-gray);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 16px 12px;
+    border-bottom: 1px solid var(--border-gray);
+    color: var(--dark-text);
+    font-size: 14px;
+}
+
+tr:hover td {
+    background-color: #fafafa; /* Resaltado sutil al pasar sobre filas */
+}
