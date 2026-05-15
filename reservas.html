@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Flora - Reservas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        input, select, textarea {
+            width: 100%; padding: 12px; margin: 10px 0 20px 0;
+            border: 1px solid var(--border-gray); border-radius: 8px; box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">🌸 Flora</div>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="inventario.html">Inventario</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="configuracion.html">Configuración</a></li>
+            <li><a href="calendario.html">Calendario</a></li>
+            <li><a href="reservas.html" style="color: var(--primary-magenta);">Reservas</a></li>
+            <li><a href="historial.html">Historial</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+        </ul>
+    </nav>
+    <div class="container" style="max-width: 600px;">
+        <h2>Formulario de Reserva de Arreglos</h2>
+        <div class="card" style="text-align: left;">
+            <form action="historial.html" method="GET">
+                <label>Tipo de Arreglo Floral:</label>
+                <select required>
+                    <option>Box Rose Arrangement (Rosas)</option>
+                    <option>Colorful Tulip Bouquet (Tulipanes)</option>
+                    <option>Colorful Vase (Orquídeas)</option>
+                </select>
+                <label>Fecha Estimada de Retiro / Envío:</label>
+                <input type="date" required>
+                <label>Indicaciones de Personalización / Tarjeta Dedicatoria:</label>
+                <textarea rows="4" placeholder="Escribí aquí el mensaje de la tarjeta..."></textarea>
+                <button type="submit" style="width: 100%;">Confirmar y Guardar Reserva</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
