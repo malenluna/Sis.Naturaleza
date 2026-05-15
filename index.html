@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Flora - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar Global Flora -->
+    <nav>
+        <div class="logo">🌸 Flora</div>
+        <ul>
+            <li><a href="index.html" style="color: var(--primary-magenta);">Inicio</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="inventario.html">Inventario</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="configuracion.html">Configuración</a></li>
+            <li><a href="calendario.html">Calendario</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="historial.html">Historial</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Banner de Bienvenida -->
+        <div class="hero-section">
+            <h1>Bienvenido a Flora<br>Gestión y Diseño Floral</h1>
+            <p style="color: var(--light-gray); margin-bottom: 20px; font-size: 16px;">
+                Sistema modular integrado para el control de stock, agenda de eventos y reservas de ramos exclusivos.
+            </p>
+            <div>
+                <a href="catalogo.html" class="btn-primary">Explorar Catálogo →</a>
+            </div>
+        </div>
+
+        <!-- Acceso Rápido por Roles (Dupla de Trabajo) -->
+        <h2>Módulos del Sistema</h2>
+        <div class="grid-layout">
+            
+            <!-- Rol Integrante A: Gestión Interna -->
+            <div class="card" style="text-align: left;">
+                <div style="font-size: 40px; margin-bottom: 10px;">📊</div>
+                <h3>Gestión y Control</h3>
+                <p>Monitoreo de métricas comerciales, niveles de stock crítico y parámetros del sistema.</p>
+                <a href="dashboard.html" class="btn-secondary-stack" style="text-align: center; text-decoration: none;">Ir al Dashboard</a>
+                <a href="inventario.html" class="btn-secondary-stack" style="background: #212121; text-align: center; text-decoration: none;">Ver Inventario</a>
+            </div>
+
+            <!-- Rol Integrante B: Interacción y Clientes -->
+            <div class="card" style="text-align: left;">
+                <div style="font-size: 40px; margin-bottom: 10px;">💐</div>
+                <h3>Interacción y Clientes</h3>
+                <p>Administración de pedidos personalizados, fechas de entrega para eventos e historial.</p>
+                <a href="reservas.html" class="btn-secondary-stack" style="text-align: center; text-decoration: none;">Nueva Reserva</a>
+                <a href="calendario.html" class="btn-secondary-stack" style="background: #212121; text-align: center; text-decoration: none;">Ver Agenda</a>
+            </div>
+
+            <!-- Resumen de Estado Operativo -->
+            <div class="card" style="text-align: left;">
+                <div style="font-size: 40px; margin-bottom: 10px;">⚙️</div>
+                <h3>Estado del Sistema</h3>
+                <p><strong>Conexión:</strong> Localhost (Simulado)</p>
+                <p><strong>Estilos unificados:</strong> Activos (styles.css)</p>
+                <p><strong>Estructura:</strong> 8 Módulos independientes enlazados.</p>
+                <a href="configuracion.html" class="btn-secondary-stack" style="background: var(--light-gray); text-align: center; text-decoration: none;">Configuración</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
