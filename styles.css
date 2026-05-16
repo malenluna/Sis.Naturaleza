@@ -51,7 +51,15 @@ nav .logo {
     font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px; /* Un poco más de espacio entre la imagen y el texto */
+}
+
+/* --- CONTROL DEL TAMAÑO DEL LOGO NUEVO --- */
+.logo-img {
+    width: 42px;          /* Ancho ideal para la barra de navegación */
+    height: 42px;         /* Alto ideal para mantener la proporción 1:1 */
+    object-fit: cover;    /* Evita que el ramo se aplaste o deforme */
+    border-radius: 50%;   /* Hace que la imagen encaje de forma armónica */
 }
 
 nav ul {
