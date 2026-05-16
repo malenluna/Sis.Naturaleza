@@ -125,6 +125,8 @@ nav a:hover {
     padding: 24px;
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column; /* Permite un mejor orden interno en tarjetas alineadas a la izquierda */
 }
 
 .card:hover {
@@ -187,7 +189,7 @@ button, .btn-primary {
     transition: background-color 0.2s ease;
     display: inline-block;
     text-decoration: none;
-    margin: 6px; /* Separación horizontal y vertical para que no se peguen */
+    margin: 6px; 
 }
 
 button:hover, .btn-primary:hover {
@@ -198,9 +200,7 @@ button:hover, .btn-primary:hover {
 .btn-secondary-stack {
     background-color: var(--primary-magenta);
     color: var(--white);
-    width: 100%;
     padding: 12px;
-    margin-top: 8px; /* Separa los botones cuando están apilados */
     border-radius: 8px; 
     font-size: 13px;
     font-weight: 500;
@@ -208,15 +208,24 @@ button:hover, .btn-primary:hover {
     cursor: pointer;
     box-sizing: border-box;
     transition: opacity 0.2s ease;
+    flex: 1; /* Hace que los dos botones compartan el espacio de forma limpia */
 }
 
 .btn-secondary-stack:hover {
     opacity: 0.9;
 }
 
+/* --- NUEVO CONTENEDOR PARA SEPARAR BOTONES DEL TEXTO EN LOS MÓDULOS --- */
+.card-buttons {
+    display: flex;
+    gap: 12px;            /* Separa los dos botones entre sí horizontalmente */
+    margin-top: 20px;     /* 👈 SEPARACIÓN DEL TEXTO DE ARRIBA */
+    width: 100%;
+}
+
 /* ==========================================================================
    Tablas de Datos Limpias (Inventario e Historial)
-   ========================================================================== */
+   ========================================================================= */
 table {
     width: 100%;
     border-collapse: collapse;
